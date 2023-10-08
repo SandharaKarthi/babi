@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equi="X-UA-Compatible" content="IE-edge">
+        <meta name="viewspot" content="width-device-width, initial-scale=1.0">
+        <title>DOCMENt</title>
+    </head>
+    <body>
+        <p>Are you surely want to delete? {{gt.Emp_name}}</p>
+        <form method="POST">
+         {% csrf_token %}
+         <input type="submit">
+        </form>
+        <a href="{% url 'trial:t3' %}">Cancel</a>
+
+    </body>
+    </html>

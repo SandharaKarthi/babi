@@ -1,0 +1,25 @@
+
+    
+    {% extends 'index.html' %}
+    {% block c1 %}
+     <a href="{% url 'trial:t2' %}">Previous</a>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>DOB</th>
+            </tr>
+            
+                {% for i in dataa %}
+                <tr>
+                <td>{{i.Emp_id}}</td>
+                <td>{{i.Emp_name}}</td>
+                <td>{{i.Emp_DOB}}</td>
+                <td><a href="{% url 'trial:t6' i.Emp_id %}">Update</td>
+                <td><a href="{% url 'trial:t7' i.Emp_id %}">delete</td>
+                </tr>
+                {% endfor %}
+            
+
+        </table>
+        {% endblock %}
